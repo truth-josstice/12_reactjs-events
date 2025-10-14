@@ -8,7 +8,7 @@
 
 export function PokemonSearcherDataToDisplay({nameToShow, imageToShow}){
 
-    if (nameToShow == "" || imageToShow =="") {
+    if (nameToShow == "" || imageToShow == "") {
         return null
     } else {
         return <section className="pokemonDataDisplay">

@@ -1,32 +1,33 @@
 import React from "react";
-
+import { PokemonSearcherDataToDisplay } from "./PokemonSearcherDataDisplay";
 
 export class PokemonSearcher extends React.Component {
-    constructor(){
-        super();
+  constructor() {
+    super();
 
-        this.state = {
-            pokemonToSearch: "pikachu",
-            responseName: "",
-            responseSpriteUrl: "",
-            
-            // Saving a whole API response can often give you a huge amount of unnecessary data
-            // response: {}
-        }
-    }
+    this.state = {
+      pokemonToSearch: "pikachu",
+      responseName: "",
+      responseSpriteUrl: "",
 
-    render(){
-        return <section className="pokemonSearcherContainer">
-            {/* <PokemonSearcherForm 
+      // Saving a whole API response can often give you a huge amount of unnecessary data
+      // response: {}
+    };
+  }
+
+  render() {
+    return (
+      <section className="pokemonSearcherContainer">
+        {/* <PokemonSearcherForm 
                 currentSearchFieldValue={pokemonToSearch}
                 searchValueUpdateFunction={() => {this.setState({})}
                 formSubmissionHandler={() => {}}
             /> */}
-            {/* <PokemonSearcherDataToDisplay
-                nameToShow={this.state.responseName}
-                imageToShow={this.state.responseSpriteUrl}
-                />
-            */}
-        </section>
-    }
+        <PokemonSearcherDataToDisplay
+          nameToShow={this.state.responseName}
+          imageToShow={this.state.responseSpriteUrl}
+        />
+      </section>
+    );
+  }
 }
