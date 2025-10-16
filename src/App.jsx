@@ -1,4 +1,5 @@
 import React from "react";
+import { PokemonSearcher } from "./components/PokemonSearcher";
 
 export class App extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ export class App extends React.Component {
   render() {
     return (
       <>
+        <PokemonSearcher />
         <button
           onClick={() => {
             this.setState((previousState) => {
