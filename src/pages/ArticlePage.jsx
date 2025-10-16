@@ -1,12 +1,10 @@
-import { useParams } from "react-router";
+import { Outlet } from "react-router";
 
 export function ArticlePage(){
-
-    let {id} = useParams();
-
     return (
         <>
-            <h1>Article ID {id}</h1>
+            <h1>Articles Here</h1>
+            <Outlet />
         </>
     )
 }

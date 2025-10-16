@@ -9,6 +9,7 @@ import { ContactPage } from "./pages/ContactPage.jsx";
 import { Navbar } from "./components/Navbar.jsx";
 import { ArticlePage } from "./pages/ArticlePage.jsx";
 import { WatchPage } from "./pages/WatchPage.jsx";
+import { ArticleByID } from "./components/ArticleByID.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,7 +22,9 @@ createRoot(document.getElementById("root")).render(
           <Route path="contact" element={<ContactPage />} />
         </Route>
         <Route path="/pokemon-search" element={<App />} />
-        <Route path="/articles/:id" element={<ArticlePage />} />
+        <Route path ="/articles" element={<ArticlePage />}>
+          <Route path="/articles/:id" element={<ArticleByID />} />
+        </Route>
         <Route path="/watch" element={<WatchPage />} />
       </Routes>
     </BrowserRouter>
